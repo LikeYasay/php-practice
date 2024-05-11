@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Future Web Developer!: Lichael Ursulo</title>
+</head>
+<body>
+    <div class="sections" id="mainContent">
+        <header class="header">
+            <button onclick="toggleMode()">Dark Mode</button>
+            <button onclick="increaseFontSize()">Increase Font Size</button>
+            <button onclick="decreaseFontSize()">Decrease Font Size</button>
+        </header>
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1> Hi, I'm Lichael Yashua E. Ursulo</h1>
+                <h2>About Me</h2>
+                <p>I'm a Bachelor of Science in Information Technology (BSIT) 1st year student.</p>
+                <p>I'm 19 and I live in Butuan City, Mindanao. I enjoy hanging out with friends, </p>
+                <p>thrilled in learning code, and just being happy as a student in this program.</p>
+                <p>Lastly, I've always dreamed of becoming a web developer.</p>
+
+                <h2>Education</h2>
+                <ul>
+                    <li>College: <i>Currently studying at Cebu Instute of Technology University</i></li>
+                    <li>Junior High and Senior High School: <i>Agusan National High School</i></li>
+                </ul>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Communication Skills</li>
+                    <li>Problem-Solving Skills</li>
+                    <li>Editing</li>
+                    <li>Drawing</li>
+                </ul>
+                <h2>Projects</h2>
+                <ul>
+                    <li><a
+                            href="https://docs.google.com/document/d/1aLc2ex2MdjCwDLwyE6jyGPSNpU3Serlr/edit?usp=drive_link&ouid=100040925597877192747&rtpof=true&sd=true">Analyzing
+                            The Social Skills and Academic Competitiveness of STEM Students</a>
+                    </li>
+                    <br>
+                    <li><a href="https://drive.google.com/file/d/1TZcoWaMyZ7izCG1i31R1Ww2iOeW_9ypq/view?usp=sharing">Buhay
+                            Palay A Phenomenological Study on the Struggles of Farmers Amidst Pandemic</a></li>
+                    <br>
+                    <li><a
+                            href="https://docs.google.com/document/d/1yzncuGTIs8RThcDMudHRUiQ_fT_7PECI/edit?usp=drive_link&ouid=100040925597877192747&rtpof=true&sd=true">Antibacterial
+                            Activity of Betel Leaves Ethanolic Extract Against Staphylococcus Aureus and Escherichia
+                            Coli</a>
+                    </li>
+                </ul>
+                <h2>Contact Info</h2>
+                <ul>
+                    <li>Facebook: Lichael Yashua E. Ursulo</li>
+                    <li>Gmail: lichael456@gmail.com</li>
+                </ul>
+                <h2>Experiences</h2>
+                <ul>
+                    <li>Information and Communications Technology (ICT) - School-Based Work Immersion Program </li>
+                    <br>
+                    <br>
+                    <br>
+                </ul>
+
+        </section>
+
+
+        <script>
+            function toggleMode() {
+                var element = document.body;
+                if (element.classList.contains("dark-mode")) {
+                    element.classList.remove("dark-mode");
+                    element.classList.add("light-mode");
+                    document.querySelector("button").innerText = "Dark Mode";
+                } else {
+                    element.classList.remove("light-mode");
+                    element.classList.add("dark-mode");
+                    document.querySelector("button").innerText = "Light Mode";
+                }
+            }
+
+            function increaseFontSize() {
+                var currentSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+                document.body.style.fontSize = (currentSize + 1) + 'px';
+            }
+
+            function decreaseFontSize() {
+                var currentSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+                document.body.style.fontSize = (currentSize - 1) + 'px';
+            }
+
+        </script>
+</body>
+</html>
