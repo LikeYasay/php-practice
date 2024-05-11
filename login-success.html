@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Web Developer!: Lichael Ursulo</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+            font-family: "Consolas", sans-serif;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        button {
+            font-family: "Consolas", sans-serif;
+            font-size: 20px;
+            color: black;
+            background-color: lightgray;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: darkgray;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 3px;
+            background: gray;
+            display: flex;
+
+            z-index: 1000;
+        }
+
+        .dark-mode .welcome-section {
+            border-top-color: white;
+        }
+
+        .dark-mode .header {
+            background: #121212;
+        }
+
+        .sections {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .login-container h2 {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1em;
+        }
+
+        .form-group label {
+            display: block;
+            color: #666;
+            margin-bottom: 0.5em;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: black;
+        }
+
+        .login-button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 0.75em;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .login-button:hover {
+            background-color: skyblue;
+        }
+
+        .welcome-section {
+            margin-top: 550px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sections" id="mainContent">
+        <header class="header">
+            <button onclick="toggleMode()">Dark Mode</button>
+            <button onclick="increaseFontSize()">Increase Font Size</button>
+            <button onclick="decreaseFontSize()">Decrease Font Size</button>
+        </header>
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1> Hi, I'm Lichael Yashua E. Ursulo</h1>
+                <h2>About Me</h2>
+                <p>I'm a Bachelor of Science in Information Technology (BSIT) 1st year student.</p>
+                <p>I'm 19 and I live in Butuan City, Mindanao. I enjoy hanging out with friends, </p>
+                <p>thrilled in learning code, and just being happy as a student in this program.</p>
+                <p>Lastly, I've always dreamed of becoming a web developer.</p>
+
+                <h2>Education</h2>
+                <ul>
+                    <li>College: <i>Currently studying at Cebu Instute of Technology University</i></li>
+                    <li>Junior High and Senior High School: <i>Agusan National High School</i></li>
+                </ul>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Communication Skills</li>
+                    <li>Problem-Solving Skills</li>
+                    <li>Editing</li>
+                    <li>Drawing</li>
+                </ul>
+                <h2>Projects</h2>
+                <ul>
+                    <li><a
+                            href="https://docs.google.com/document/d/1aLc2ex2MdjCwDLwyE6jyGPSNpU3Serlr/edit?usp=drive_link&ouid=100040925597877192747&rtpof=true&sd=true">Analyzing
+                            The Social Skills and Academic Competitiveness of STEM Students</a>
+                    </li>
+                    <br>
+                    <li><a href="https://drive.google.com/file/d/1TZcoWaMyZ7izCG1i31R1Ww2iOeW_9ypq/view?usp=sharing">Buhay
+                            Palay A Phenomenological Study on the Struggles of Farmers Amidst Pandemic</a></li>
+                    <br>
+                    <li><a
+                            href="https://docs.google.com/document/d/1yzncuGTIs8RThcDMudHRUiQ_fT_7PECI/edit?usp=drive_link&ouid=100040925597877192747&rtpof=true&sd=true">Antibacterial
+                            Activity of Betel Leaves Ethanolic Extract Against Staphylococcus Aureus and Escherichia
+                            Coli</a>
+                    </li>
+                </ul>
+                <h2>Contact Info</h2>
+                <ul>
+                    <li>Facebook: Lichael Yashua E. Ursulo</li>
+                    <li>Gmail: lichael456@gmail.com</li>
+                </ul>
+                <h2>Experiences</h2>
+                <ul>
+                    <li>Information and Communications Technology (ICT) - School-Based Work Immersion Program </li>
+                    <br>
+                    <br>
+                    <br>
+                </ul>
+
+        </section>
+
+
+        <script>
+            function toggleMode() {
+                var element = document.body;
+                if (element.classList.contains("dark-mode")) {
+                    element.classList.remove("dark-mode");
+                    element.classList.add("light-mode");
+                    document.querySelector("button").innerText = "Dark Mode";
+                } else {
+                    element.classList.remove("light-mode");
+                    element.classList.add("dark-mode");
+                    document.querySelector("button").innerText = "Light Mode";
+                }
+            }
+
+            function increaseFontSize() {
+                var currentSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+                document.body.style.fontSize = (currentSize + 1) + 'px';
+            }
+
+            function decreaseFontSize() {
+                var currentSize = parseFloat(window.getComputedStyle(document.body, null).getPropertyValue('font-size'));
+                document.body.style.fontSize = (currentSize - 1) + 'px';
+            }
+
+        </script>
+
+</body>
+
+</html>
